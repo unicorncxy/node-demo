@@ -21,14 +21,14 @@ var server = http.createServer(function(request, response){
 
   console.log('HTTP 路径为\n' + path)
   if(path == '/style'){
-	response.setHeader('Content-Type', 'text/css; charset=utf-8')
+	      response.setHeader('Content-Type', 'text/css; charset=utf-8')
 	      response.write('body{background-color: green;}h1{color: red;}')
 	      response.end()
   }
   else if(path == '/'){
     response.setHeader('Content-Type', 'text/html; charset=utf-8')
     response.write('<!DOCTYPE>\n<html>'  + 
-      '<head><link rel="stylesheet" href="/style.js">' +
+     '<head><link rel="stylesheet" href="/style">' +
       '</head><body>'  +
       '<h1>当然是选择原谅他啊！</h1>' +
       '<style src="/style"></style>' +
